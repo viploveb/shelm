@@ -23,5 +23,3 @@ alias shelm='/usr/local/bin/shelm'
 EOF
 
 echo "Installation complete."
-
-tput init
