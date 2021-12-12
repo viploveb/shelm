@@ -1,5 +1,5 @@
 waitress
 flask
 argparse
-urllib
+#urllib
 requests
