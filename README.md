@@ -6,19 +6,19 @@ When using helm charts developers and administrators often neglect the security 
 ---
 
 ### Installation
-`curl https://raw.githubusercontent.com/viploveb/shelm/master/install.sh | /bin/bash`
+    curl https://raw.githubusercontent.com/viploveb/shelm/master/install.sh | /bin/bash
 
  ### Usage 
  
- - `shelm list`
+ 👉  `shelm list`
  
  This will list all the available shelm charts.
  
- - `shelm search <chart_name>`
+ 👉 `shelm search <chart_name>`
  
- Example - `shelm search haproxy` This will tell the user if the specified chart is available or not.
+Example - "shelm search haproxy" This will tell the user if the specified chart is available or not.
  
- - `shelm install <chart_name>`
+ 👉 `shelm install <chart_name>`
 
 This will download the specified chart.
 
