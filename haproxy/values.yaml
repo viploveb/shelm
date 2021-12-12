@@ -127,7 +127,7 @@ image:
   pullSecrets: []
 ## @param replicaCount Number of haproxy replicas to deploy
 ##
-replicaCount: 1
+replicaCount: 2
 ## Configure extra options for haproxy containers' liveness and readiness probes
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/#configure-probes
 ## @param livenessProbe.enabled Enable livenessProbe on haproxy nodes
@@ -170,8 +170,12 @@ customReadinessProbe: {}
 ## @param resources.requests The requested resources for the haproxy containers
 ##
 resources:
-  limits: {}
-  requests: {}
+  requests:
+    memory: "1024Mi"
+    cpu: "1"
+  limits:
+    memory: "2048Mi"
+    cpu: "2"
 ## Configure Pods Security Context
 ## ref: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/#set-the-security-context-for-a-pod
 ## @param podSecurityContext.enabled Enabled haproxy pods' Security Context
@@ -187,7 +191,7 @@ podSecurityContext:
 ##
 containerSecurityContext:
   enabled: true
-  runAsUser: 1001
+  runAsUser: 25000
 
 ## HAProxy Pod Disruption Budget configuration
 ## ref: https://kubernetes.io/docs/tasks/run-application/configure-pdb/
