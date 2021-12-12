@@ -12,14 +12,14 @@ if ! unzip >/dev/null 2>&1;then
     exit 1
 fi
 
-unzip -qq shelm.zip
+unzip -qq shelm.zip -d shelm
 
 pip3 install -r  ./shelm/requirements.txt 2>&1 > /dev/null
 
-cp ./shelm/shelm.py /usr/local/bin || sudo cp ./shelm/shelm.py /usr/local/bin
+#cp ./shelm/shelm.py /usr/local/bin || sudo cp ./shelm/shelm.py /usr/local/bin
 
 cat <<EOF >> .bashrc
-alias shelm='/usr/local/bin/shelm'
+alias shelm='python3 ./shelm/shelm.py'
 EOF
 
 source ~/.bashrc
