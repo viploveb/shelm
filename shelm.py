@@ -23,7 +23,7 @@ args = my_parser.parse_args()
 
 if args.command == 'install':
     # API call to download specified chart will go here
-    remote_url = "http://74.220.21.60:31646/files/{0}.zip".format(args.name)
+    remote_url = "http://ec2-44-199-204-102.compute-1.amazonaws.com:80/files/{0}.zip".format(args.name)
     local_file = "{}.zip".format(args.name)
     try:
         request.urlretrieve(remote_url, local_file)
@@ -34,7 +34,7 @@ if args.command == 'install':
 
 elif args.command == 'search':
     # API call to search for specified charts
-    response = requests.get('http://74.220.21.60:31646/files')
+    response = requests.get('http://ec2-44-199-204-102.compute-1.amazonaws.com:80/files')
     if args.chart_name in response.text:
         print(args.chart_name,"is available")
     else:
@@ -43,7 +43,7 @@ elif args.command == 'search':
 elif args.command == 'list':
     # API call to list all available charts
     try:
-        response = requests.get('http://74.220.21.60:31646/files')
+        response = requests.get('http://ec2-44-199-204-102.compute-1.amazonaws.com:80/files')
     except Exception:
         print('Error') 
     else:

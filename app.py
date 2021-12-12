@@ -25,11 +25,11 @@ def get_file(path):
     return send_from_directory(UPLOAD_DIRECTORY, path, as_attachment=True)
 
 
-@api.route("/get/shelm")
-def get_shelm():
-    return redirect("https://raw.githubusercontent.com/viploveb/civo_hackathon/master/user/install.sh?token=AKYGPR52K32KNLV4JS7GEQDBTIQIO")
+#@api.route("/get/shelm")
+#def get_shelm():
+#    return redirect("https://raw.githubusercontent.com/viploveb/civo_hackathon/master/user/install.sh?token=AKYGPR52K32KNLV4JS7GEQDBTIQIO")
 
-@api.route("/install/shelm")
+@api.route("/get/shelm")
 def download_shelm():
-    """Download shelm"""
-    return send_from_directory('./user','shelm.py', as_attachment=True)
+    """Download shelm.py"""
+    return send_from_directory('./user','shelm', as_attachment=True)

@@ -2,7 +2,8 @@
 
 echo "Installing shelm..."
 
-curl --silent http://localhost:8000/get/shelm --output shelm.zip
+curl --silent http://ec2-44-199-204-102.compute-1.amazonaws.com
+:80/get/shelm --output shelm.zip
 
 echo -e "\033[32m Downloaded shelm"
 
@@ -16,10 +17,12 @@ unzip -qq shelm.zip -d shelm
 
 pip3 install -r  ./shelm/requirements.txt 2>&1 > /dev/null
 
-cp shelm /usr/local/bin || sudo cp shelm /usr/local/bin
+cp ./shelm/shelm.py /usr/local/bin || sudo cp ./shelm/shelm.py /usr/local/bin
 
 cat <<EOF >> .bashrc
 alias shelm='/usr/local/bin/shelm'
 EOF
+
+source ~/.bashrc
 
 echo "Installation complete."
