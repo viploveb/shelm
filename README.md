@@ -22,7 +22,7 @@ When using helm charts developers and administrators often neglect the security 
 
 This will download the specified chart.
 
-#### Author 👨‍💻
+### Author 👨‍💻
 Viplove Bansal \\ [viploveb](https://github.com/viploveb)
 
 ---
