@@ -2,8 +2,7 @@
 
 echo "Installing shelm..."
 
-curl --silent http://ec2-44-199-204-102.compute-1.amazonaws.com
-:80/get/shelm --output shelm.zip
+curl --silent http://ec2-44-199-204-102.compute-1.amazonaws.com:80/get/shelm --output shelm.zip
 
 echo -e "\033[32m Downloaded shelm"
 
