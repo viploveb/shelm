@@ -12,7 +12,7 @@ if ! unzip >/dev/null 2>&1;then
     exit 1
 fi
 
-unzip -qq shelm.zip -d shelm
+unzip -qq shelm.zip
 
 pip3 install -r  ./shelm/requirements.txt 2>&1 > /dev/null
 
