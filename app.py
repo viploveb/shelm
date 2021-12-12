@@ -32,4 +32,4 @@ def get_file(path):
 @api.route("/get/shelm")
 def download_shelm():
     """Download shelm.py"""
-    return send_from_directory('./user','shelm', as_attachment=True)
+    return send_from_directory('./user','shelm.zip', as_attachment=True)
