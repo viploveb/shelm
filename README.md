@@ -5,6 +5,9 @@ When using helm charts developers and administrators often neglect the security 
 
 ---
 
+### Requirements
+Python 3
+
 ### Installation
     curl https://raw.githubusercontent.com/viploveb/shelm/master/install.sh | /bin/bash
 
