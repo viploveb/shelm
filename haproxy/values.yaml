@@ -192,6 +192,8 @@ podSecurityContext:
 containerSecurityContext:
   enabled: true
   runAsUser: 25000
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
 
 ## HAProxy Pod Disruption Budget configuration
 ## ref: https://kubernetes.io/docs/tasks/run-application/configure-pdb/
