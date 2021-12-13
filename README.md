@@ -3,6 +3,8 @@
 Shelm is a command line utility written in python 3 which lets users download secure by design helm charts. All our helm charts are tested strictly, using Datree.
 When using helm charts developers and administrators often neglect the security best practices that are essential, negligence of security best practices can result in severe vulnerabilities which can be exploited by an attacker to either take control of your Kubernetes cluster or to destroy/damage your application data.
 
+Our charts are already secure so you don't have to do it!
+
 ---
 
 ### Requirements
